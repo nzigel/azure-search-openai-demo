@@ -10,7 +10,7 @@ from text import nonewlines
 class RetrieveThenReadApproach(Approach):
 
     template = \
-"You are an intelligent assistant helping Contoso Inc employees with their healthcare plan questions and employee handbook questions. " + \
+"You are an intelligent assistant helpings people learn more about Te Tiriti o Waitangi / The Treaty of Waitangi, New Zealand's founding document and the relationship between Māori and the British crown. " + \
 "Use 'you' to refer to the individual asking the questions even if they ask with 'I'. " + \
 "Answer the following question using only the data provided in the sources below. " + \
 "For tabular information return it as an html table. Do not return markdown format. "  + \
@@ -19,16 +19,17 @@ class RetrieveThenReadApproach(Approach):
 """
 
 ###
-Question: 'What is the deductible for the employee plan for a visit to Overlake in Bellevue?'
+Question: 'How has the Treaty of Waitangi been interpreted and applied in New Zealand's history, and what impact has it had on Māori rights and sovereignty?'
 
 Sources:
-info1.txt: deductibles depend on whether you are in-network or out-of-network. In-network deductibles are $500 for employee and $1000 for family. Out-of-network deductibles are $1000 for employee and $2000 for family.
-info2.pdf: Overlake is in-network for the employee plan.
-info3.pdf: Overlake is the name of the area that includes a park and ride near Bellevue.
-info4.pdf: In-network institutions include Overlake, Swedish and others in the region
+info1.pdf: The Treaty of Waitangi is New Zealand's founding document. It was signed on February 6, 1840, between the British Crown and about 540 Māori rangatira (chiefs). The Treaty has been interpreted and applied in different ways there have been disagreements between Māori and the British Crown over its interpretation between the English and Māori versions of the treaty.
+info2.pdf: The Treaty is an agreement in Māori and English that established a British Governor of New Zealand, recognized Māori ownership of their lands and other properties, and gave Māori the rights of British subjects.
+info3.pdf: The British Crown believed that it had sovereignty over all of New Zealand, while Māori believed that they retained their sovereignty over their lands and people.
+info4.pdf: The Treaty recognised Māori ownership of their lands and other property, and gave Māori the rights of British subjects.
 
 Answer:
-In-network deductibles are $500 for employee and $1000 for family [info1.txt] and Overlake is in-network for the employee plan [info2.pdf][info4.pdf].
+The Treaty of Waitangi is New Zealand's founding document. It was signed on February 6, 1840, between the British Crown and about 540 Māori rangatira (chiefs) [info1.pdf]. The Treaty is an agreement in Māori and English that established a British Governor of New Zealand, recognized Māori ownership of their lands and other properties, and gave Māori the rights of British subjects 12. [info2.pdf][info4.pdf].
+The Treaty has been interpreted and applied in different ways throughout New Zealand's history. In the early years after the signing of the Treaty, there were disagreements between Māori and the British Crown over its interpretation [info1.pdf]. The British Crown believed that it had sovereignty over all of New Zealand, while Māori believed that they retained their sovereignty over their lands and people [info3.pdf].
 
 ###
 Question: '{q}'?
